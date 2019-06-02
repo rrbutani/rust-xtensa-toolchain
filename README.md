@@ -1,4 +1,5 @@
 # rust-xtensa-toolchain
+[![](https://images.microbadger.com/badges/image/rrbutani/rust-xtensa.svg)](https://cloud.docker.com/u/rrbutani/repository/docker/rrbutani/rust-xtensa)
 
 A dev environment container that has pre-release versions of Rust for Xtensa devices (specifically the ESP32).
 
