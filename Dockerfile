@@ -209,4 +209,4 @@ RUN : \
 
 WORKDIR /opt/project
 
-CMD ["xargo", "build", "--release", "--verbose"]
+CMD ["xargo", "build", "--release"]
