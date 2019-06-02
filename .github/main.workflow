@@ -1,4 +1,4 @@
-workflow "Build container, tag it, and push to Docker Hub" {
+workflow "Build the container, tag it, and push to Docker Hub" {
   resolves = ["Build container", "Log into Docker Hub", "Tag toolchain container", "Push to Docker Hub"]
   on = "push"
 }
