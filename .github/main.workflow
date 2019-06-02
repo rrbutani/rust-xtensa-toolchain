@@ -1,6 +1,6 @@
 workflow "Build container, tag it, and push to Docker Hub" {
-  on = "push"
   resolves = ["Build container", "Log into Docker Hub", "Tag toolchain container", "Push to Docker Hub"]
+  on = "push"
 }
 
 action "Log into Docker Hub" {
