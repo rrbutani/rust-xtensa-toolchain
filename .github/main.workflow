@@ -28,7 +28,7 @@ action "Tag toolchain container" {
 
 action "Tag toolchain container with version" {
   uses = "docker://rrbutani/docker-version-tag"
-  needs = ["Build container"]
+  needs = ["Build container: Stage 2"]
   args = "rust-xtensa rrbutani/rust-xtensa Dockerfile"
 }
 
