@@ -1,0 +1,15 @@
+dist: xenial
+
+services:
+  - docker
+
+script:
+  - docker build -t rust-xtensa .
+
+deploy:
+  provider: script
+  script:
+    - docker tag rust-xtensa:latest rrbutani/rust-xtensa:latest
+    - docker tag rrbutani/rust-xtensa:latest rust-xtensa:"$(docker inspect rrbutani/rust-xtensa --format '{{ index .Config.Labels "version" }}')"
+    - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+    - docker push rrbutani/rust-xtensa
